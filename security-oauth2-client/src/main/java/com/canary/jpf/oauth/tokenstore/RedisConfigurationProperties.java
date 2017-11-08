@@ -43,10 +43,11 @@ public class RedisConfigurationProperties {
      * @return
      */
     public RedisConnectionFactory connectionFactory() {
-        //单点
+//        //单点
         if(nodes.size() == 1) {
-            JedisShardInfo shardInfo = new JedisShardInfo(nodes.get(0), Protocol.DEFAULT_PORT);
-            shardInfo.setPassword(requirepass);
+            JedisShardInfo shardInfo = new JedisShardInfo(nodes.get(0).split(":")[0], Protocol.DEFAULT_PORT);
+            if(requirepass != null)
+                shardInfo.setPassword(requirepass);
             return new JedisConnectionFactory(shardInfo);
         }
         //集群

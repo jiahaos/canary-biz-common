@@ -10,7 +10,10 @@ import java.io.Serializable;
 import java.util.Collection;
 
 /**
- * Created by hsk on 2017/1/11.
+ * @author jiahao
+ * @Package com.canary.jpf.oauth.tokenstore
+ * @Description: 实现spring security 的UserDetails， security自动会自动调用其属性进行相应校验
+ * @date 2017/11/7 16:40
  */
 @Data
 public class AccountUserDetails implements UserDetails, Serializable {

@@ -9,9 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by hsk on 2017/1/17.
- */
 @Slf4j
 @Component
 public class ApOAuth2SessionService {
